@@ -206,6 +206,8 @@ const messages = [
 messages.forEach(msg => {
   const li = document.createElement('li');
   li.innerText = msg;
+  li.style.marginBottom = '10px';
+  li.style.padding = '10px';
   result.append(li);
 });
     // result.innerText = `${first_message} ${second_message} ${third_message} ${fourth_message} Our reccomdetion for you: ${fifth_message} Your future pediction is: ${sixth_message}`
