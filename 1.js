@@ -194,8 +194,21 @@ form.addEventListener('submit',(event)=>{
     const pre = (day*month*year)%20
     const sixth_message = futurePredictions[pre];
 
+const messages = [
+  first_message,
+  second_message,
+  third_message,
+  fourth_message,
+  "Recommendation: " + fifth_message,
+  "Prediction: " + sixth_message
+];
 
-    result.innerText = `${first_message} ${second_message} ${third_message} ${fourth_message} Our reccomdetion for you: ${fifth_message} Your future pediction is: ${sixth_message}`
+messages.forEach(msg => {
+  const li = document.createElement('li');
+  li.innerText = msg;
+  result.append(li);
+});
+    // result.innerText = `${first_message} ${second_message} ${third_message} ${fourth_message} Our reccomdetion for you: ${fifth_message} Your future pediction is: ${sixth_message}`
 
     
 })
